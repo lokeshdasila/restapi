@@ -1,0 +1,12 @@
+var http = require("http");
+var app = require('./app');
+"use strict";
+
+const port = process.env.PORT || 3000;
+const ip = process.env.IP || "127.0.0.1";
+
+const server = http.createServer(app);
+
+server.listen(port,ip,()=>{
+    console.log("Server started at port "+port+" and ip "+ip);
+})
