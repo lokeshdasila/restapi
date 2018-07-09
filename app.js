@@ -1,9 +1,11 @@
 var express = require("express"),
-    bodyParser = require('body-parser');
+    bodyParser = require('body-parser'),
+    mongu = require('mongoose');
 
 var app = express();
 //var port = process.env.port || 3000;
 //var ip = process.env.ip || "127.0.0.1";
+mongu.connect();
 const productsRoutes = require("./api/routes/products");
 const orderRoutes   =   require("./api/routes/orders");
 const morgan = require('morgan');
