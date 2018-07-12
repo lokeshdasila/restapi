@@ -5,7 +5,7 @@ var express = require("express"),
 var app = express();
 //var port = process.env.port || 3000;
 //var ip = process.env.ip || "127.0.0.1";
-mongu.connect();
+mongu.connect('mongodb://localhost/restapi');
 const productsRoutes = require("./api/routes/products");
 const orderRoutes   =   require("./api/routes/orders");
 const morgan = require('morgan');
